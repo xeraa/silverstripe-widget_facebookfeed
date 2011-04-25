@@ -14,19 +14,17 @@ SilverStripe 2.4+ (might work with 2.3, but only tested on 2.4)
 1. ``allow_url_fopen`` must be enabled for this to work, otherwise you're not allowed to use remote objects. 
 2. Extract the ``silverstripe-widget_facebookfeed`` folder into the top level of your site and rename it to ``widget_facebookfeed``.
 3. Ensure that widgets have been enabled in your site. You should have something like the following code in ``mysite/code/Page.php``:
-<!-- -->
-        public static $has_one = array(
-          'SideBar' => 'WidgetArea',
-        );
-        public function getCMSFields(){
-          $fields = parent::getCMSFields();
-          $fields->addFieldToTab(
-            'Root.Content.Widgets',
-            new WidgetAreaEditor('SideBar')
+          public static $has_one = array(
+            'SideBar' => 'WidgetArea',
           );
-          return $fields;
-        }
-<!-- -->
+          public function getCMSFields(){
+            $fields = parent::getCMSFields();
+            $fields->addFieldToTab(
+              'Root.Content.Widgets',
+              new WidgetAreaEditor('SideBar')
+            );
+            return $fields;
+          }
 3. Add the placeholder ``$SideBar`` to your template where you want to display your Facebook feed.
 4. Run ``/dev/build?flush=all``.
 5. Reload the CMS interface, the widget should be usable on the *Widgets* tab.
