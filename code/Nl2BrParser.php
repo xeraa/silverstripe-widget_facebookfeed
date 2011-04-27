@@ -4,7 +4,7 @@
 /**
  * Custom class to replace newlines with (html) breaks.
  *
- * @package mysite
+ * @package widget_facebookfeed
  */
 class Nl2BrParser extends TextParser {
 
