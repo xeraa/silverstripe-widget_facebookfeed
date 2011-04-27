@@ -1,6 +1,6 @@
 <% if Limit == 0 %>
 <% else %>
-	<div id="facebookfeed" class="rounded">
+	<div id="facebookfeed">
 		<h2>Facebook Update<% if Limit == 1 %><% else %>s<% end_if %></h2>
 		<% control Feeds %>
 			<p>
