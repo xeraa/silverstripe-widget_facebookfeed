@@ -1,7 +1,7 @@
 <% if Limit == 0 %>
 <% else %>
 	<div id="facebookfeed">
-		<h2>Facebook Update<% if Limit == 1 %><% else %>s<% end_if %></h2>
+		<h2><% if Limit == 1 %><% _t('UPDATE','Facebook Update') %><% else %><% _t('UPDATES','Facebook Updates') %><% end_if %></h2>
 		<% control Feeds %>
 			<p>
 				$Message.Parse(Nl2BrParser)<br/>

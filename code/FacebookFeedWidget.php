@@ -29,8 +29,14 @@ class FacebookFeedWidget extends Widget {
 	/**
 	 * Provide title and description to be used in the CMS.
 	 */
-	public static $cmsTitle = 'Facebook Messages';
-	public static $description = 'A list of the most recent Facebook messages';
+	//public static $cmsTitle = 'Facebook Messages';
+	public function cmsTitle(){
+		return _t('FacebookFeedWidget.TITLE', 'Facebook Messages');
+	}
+	//public static $description = 'A list of the most recent Facebook messages';
+	public function description(){
+		return _t('FacebookFeedWidget.DESCRIPTION', 'A list of the most recent Facebook messages');
+	}
 
 
 	/**
@@ -40,8 +46,8 @@ class FacebookFeedWidget extends Widget {
 	 */
 	public function getCMSFields(){
 		return new FieldSet(
-			new TextField('Identifier', 'Identifier of the Facebook account to display'),
-			new NumericField('Limit', 'Maximum number of messages to display')
+			new TextField('Identifier', _t('FacebookFeedWidget.ID', 'Identifier of the Facebook account to display')),
+			new NumericField('Limit', _t('FacebookFeedWidget.LIMIT', 'Maximum number of messages to display'))
 		);
 	}
 
