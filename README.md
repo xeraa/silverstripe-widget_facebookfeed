@@ -1,4 +1,4 @@
-# PHPMailer for SilverStripe
+# Facebook widget for SilverStripe
 Fetching your latest status messages from Facebook.
 
 
