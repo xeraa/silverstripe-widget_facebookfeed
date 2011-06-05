@@ -11,9 +11,10 @@ SilverStripe 2.4+ (might work with 2.3, but only tested on 2.4)
 
 
 ## Installation
-1. ``allow_url_fopen`` must be enabled for this to work, otherwise you're not allowed to use remote objects. 
-2. Extract the ``silverstripe-widget_facebookfeed`` folder into the top level of your site and rename it to ``widget_facebookfeed``.
-3. Ensure that widgets have been enabled in your site. You should have something like the following code in ``mysite/code/Page.php``:
+1. ``allow_url_fopen`` must be enabled for this to work, otherwise you're not allowed to use remote objects.
+2. SSL must be enabled as the Facebook API requires a https connection.
+3. Extract the ``silverstripe-widget_facebookfeed`` folder into the top level of your site and rename it to ``widget_facebookfeed``.
+4. Ensure that widgets have been enabled in your site. You should have something like the following code in ``mysite/code/Page.php``:
 
         public static $has_one = array(
           'SideBar' => 'WidgetArea',
@@ -27,13 +28,14 @@ SilverStripe 2.4+ (might work with 2.3, but only tested on 2.4)
           return $fields;
         }
 
-3. Add the placeholder ``$SideBar`` to your template where you want to display your Facebook feed.
-4. Run ``/dev/build?flush=all``.
-5. Reload the CMS interface, the widget should be usable on the *Widgets* tab.
+5. Add the placeholder ``$SideBar`` to your template where you want to display your Facebook feed.
+6. Run ``/dev/build?flush=all``.
+7. Reload the CMS interface, the widget should be usable on the *Widgets* tab.
 
 
 ## Configuration
-You need to add the ID of the Facebook account you want to display in the CMS. If the URL of your account is https://www.facebook.com/pages/silverstripe/44641219945?ref=ts&v=wall, it's 44641219945.
+* You need to add the ID of the Facebook account you want to display in the CMS. If the URL of your account is https://www.facebook.com/pages/silverstripe/44641219945?ref=ts&v=wall, it's 44641219945.
+* You need a Facebook ``access_token`` (API change 2011/06/03). See [[https://developers.facebook.com/docs/authentication/]] on how to get one. Add it to ``mysite/_config.php``: ``define('FACEBOOK_ACCESS_TOKEN', '<your token>');``
 
 
 
