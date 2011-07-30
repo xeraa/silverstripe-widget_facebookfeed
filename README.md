@@ -35,7 +35,8 @@ SilverStripe 2.4+ (might work with 2.3, but only tested on 2.4)
 
 ## Configuration
 * You need to add the ID of the Facebook account you want to display in the CMS. If the URL of your account is https://www.facebook.com/pages/silverstripe/44641219945?ref=ts&v=wall, it's 44641219945.
-* You need a Facebook ``access_token`` (API change 2011/06/03). See https://developers.facebook.com/docs/authentication/ on how to get one. Add it to ``mysite/_config.php``: ``define('FACEBOOK_ACCESS_TOKEN', '<your token>');``
+* You need a Facebook ``access_token`` (API change 2011/06/03). Add it to ``mysite/_config.php``: ``define('FACEBOOK_ACCESS_TOKEN', '<your token>');``
+* https://developers.facebook.com/apps allows you to view your access tokens quickly or create new ones. For more details see https://developers.facebook.com/docs/authentication/.
 
 
 
