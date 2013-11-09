@@ -31,6 +31,7 @@ SilverStripe 2.4+ (might work with 2.3, but only tested on 2.4)
 5. Add the placeholder ``$SideBar`` to your template where you want to display your Facebook feed.
 6. Run ``/dev/build?flush=all``.
 7. Reload the CMS interface, the widget should be usable on the *Widgets* tab.
+8. In case you run into the error ``Fatal Error Call To Undefined Function Json_decode`` you need to install the JSON PHP extension. For example with: ``sudo apt-get install php5-json``
 
 
 ## Configuration
